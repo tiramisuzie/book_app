@@ -21,9 +21,19 @@ app.use(express.static('./public'));
 
 app.set('view engine', 'ejs');
 
-
-
-
+app.get('/books', (req, res) => {
+  client.query ('SELECT title, author, image_url FROM books;')
+  .then (result => {
+    console.log(result);
+    res.render('index', {
+      bookTitle: 'Books:',
+      books: result.rows
+    })
+  })
+  .catch(err => {
+    console.log(err);
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}!`)
