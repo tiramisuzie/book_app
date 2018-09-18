@@ -1,0 +1,10 @@
+header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #800020;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}

@@ -22,10 +22,10 @@ app.use(express.static('./public'));
 app.set('view engine', 'ejs');
 
 app.get('/books', (req, res) => {
-  client.query ('SELECT title, author, image_url FROM books;')
+  client.query ('SELECT * FROM books;')
   .then (result => {
     res.render('index', {
-      bookTitle: 'Books:',
+      bookTitle: 'Bookster',
       books: result.rows
     })
   })
@@ -37,7 +37,9 @@ app.get('/books', (req, res) => {
 app.get('*', (req, res) => {
   res.statusCode = 404;
   res.render('error', {
-  error: 'BAD URL - Try Again!'
+  error: 404, 
+  url: 'SORRY, BAD URL '
+  });
 });
 
 app.listen(PORT, () => {
