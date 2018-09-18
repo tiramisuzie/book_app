@@ -13,6 +13,14 @@
   <title>Book App</title>
 </head>
 <body>
-  
+  <h1><%= bookTitle %></h1>
+  <section>
+    <ul>
+      <% books.forEach( book => {  %>
+        <li class=""><%= book.title %> - <%= book.author %> - <img src="<%= book.image_url %>" alt=""></li>
+      <% }) %>
+      <p>Total books in DB: <%= books.length %></p>
+    </ul>
+  </section>
 </body>
 </html>

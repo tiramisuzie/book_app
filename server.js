@@ -21,8 +21,23 @@ app.use(express.static('./public'));
 
 app.set('view engine', 'ejs');
 
-app.get('/', (request, response) => {
-  response.send('Hello world');
+app.get('/books', (req, res) => {
+  client.query ('SELECT title, author, image_url FROM books;')
+  .then (result => {
+    res.render('index', {
+      bookTitle: 'Books:',
+      books: result.rows
+    })
+  })
+  .catch(err => {
+    console.log(err);
+  });
+});
+
+app.get('*', (req, res) => {
+  res.statusCode = 404;
+  res.render('error', {
+  error: 'BAD URL - Try Again!'
 });
 
 app.listen(PORT, () => {
