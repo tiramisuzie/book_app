@@ -16,9 +16,6 @@ galleryItem {
 .galleryItem img {
   width: 128px;
   height: 200px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }
 
 .galleryItem {

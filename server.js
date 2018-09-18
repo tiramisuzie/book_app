@@ -37,7 +37,8 @@ app.get('/books', (req, res) => {
 app.get('*', (req, res) => {
   res.statusCode = 404;
   res.render('error', {
-  error: 'BAD URL - Try Again!'
+  error: 404, 
+  url: 'SORRY, BAD URL '
   });
 });
 

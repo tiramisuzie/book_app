@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+
+/* Main CSS */
+
+body {
+    background-image: url('https://www.lifewire.com/thmb/Osys0gY3qKd19so4j1w9U5uWaCI=/1680x1050/filters:no_upscale():max_bytes(150000):strip_icc()/colorful-chairs-free-beach-wallpapers-beach-backgrounds-587fb9eb5f9b584db31f75d4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial;
+    margin: 8px;
+    color: red;
+}
+
+body a {
+    text-decoration: none;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.main>.content {
+    font-size: 9em;
+    font-weight: 400;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.main>.sorry {
+    font-size: 2em;
+    font-weight: normal;
+    text-align: center;
+}
