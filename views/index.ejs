@@ -9,18 +9,24 @@
   <link rel="stylesheet" type="text/css" href="../styles/icons.css" />
   <link rel="stylesheet" type="text/css" href="../styles/layout.css" />
   <link rel="stylesheet" type="text/css" href="../styles/modules.css" />
-
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   <title>Book App</title>
 </head>
 <body>
-  <h1><%= bookTitle %></h1>
-  <section>
-    <ul>
-      <% books.forEach( book => {  %>
-        <li class=""><%= book.title %> - <%= book.author %> - <img src="<%= book.image_url %>" alt=""></li>
-      <% }) %>
-      <p>Total books in DB: <%= books.length %></p>
-    </ul>
-  </section>
+  <header>
+    <h1><%= bookTitle %></h1>
+  </header>
+  <div class="container">
+    <% books.forEach( book => {  %>
+      <div class="galleryItem">
+        <a href="#"><img src="<%= book.image_url %>" alt=""/></a>          
+        <h4>Author: <%= book.author %></h4>
+        <h3>Title: <%= book.title %></h3>
+      </div>
+      <% });%>   
+  </div>
+  <footer>
+    <h2>Number of books: <%= books.length %></h2>        
+  </footer>
 </body>
 </html>
