@@ -21,9 +21,9 @@ app.use(express.static('./public'));
 
 app.set('view engine', 'ejs');
 
-
-
-
+app.get('/', (request, response) => {
+  response.send('Hello world');
+});
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}!`)
