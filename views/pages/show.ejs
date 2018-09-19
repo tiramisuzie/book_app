@@ -13,20 +13,12 @@
   <title>Book App</title>
 </head>
 <body>
-  <header>
-    <h1><%= bookTitle %></h1>
-  </header>
-  <div class="container">
-    <% books.forEach( book => {  %>
-      <div class="galleryItem">
-        <a href="/book/<%=book.id%>"><img src="<%= book.image_url %>" alt=""/></a>          
-        <h4>Author: <%= book.author %></h4>
-        <h3>Title: <%= book.title %></h3>
-      </div>
-      <% });%>   
+  <div id="container">
+    <a href="#"><img src="<%= book.image_url %>" alt=""/></a> 
+    <h3>Title: <%= book.title %></h3>
+    <h4>Author: <%= book.author %></h4>
+    <p><%= book.description %></p>
+    <h4><%= book.isbn %></h4>
   </div>
-  <footer>
-    <h2>Number of books: <%= books.length %></h2>        
-  </footer>
 </body>
 </html>
