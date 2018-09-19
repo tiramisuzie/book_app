@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head'); %>
+<body>
+  <%- include('../partials/header', {bookTitle: 'Bookster'}); %>
+  <div id="container">
+    <a href="#"><img src="<%= book.image_url %>" alt=""/></a> 
+    <h3>Title: <%= book.title %></h3>
+    <h4>Author: <%= book.author %></h4>
+    <p><%= book.description %></p>
+    <h4><%= book.isbn %></h4>
+  </div>
+</body>
+</html>
