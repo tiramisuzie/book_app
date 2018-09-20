@@ -5,11 +5,11 @@
   <%- include('partials/header', {bookTitle: 'Add A Book'}); %>
 
   <form action="/book" method="POST">
-    <label>Book Title: <input type="text" name="title"></label>
-    <label>Author: <input type="text" name="author"></label>
-    <label>ISBN: <input type="number" name="isbn"></label>
-    <label>Image URL: <input type="url" name="image_url" id="url"></label>
-    <label>Description: <input type="textarea" name="description"></label>
+    <label>Book Title: <input type="text" name="title" required></label>
+    <label>Author: <input type="text" name="author" required></label>
+    <label>ISBN: <input type="number" name="isbn" required></label>
+    <label>Image URL: <input type="url" name="image_url" id="url" pattern="https?://.+" required></label>
+    <label>Description: <input type="textarea" name="description" required></label>
     <input type="submit" name="submit" id="submit">
   </form>
 </body>
