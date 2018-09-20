@@ -16,9 +16,13 @@ app.use(express.static('./public'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => res.redirect('/book'));
+app.get('/book/newbook', (req, res) => {
+  res.render('new');
+});
 app.get('/book', books.getBooks);
 
 app.get('/book/:id', books.getOneBook);
+app.post('/book', books.createBook);
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}!`)
