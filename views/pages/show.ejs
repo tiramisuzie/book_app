@@ -3,17 +3,15 @@
   <%- include('../partials/head'); %>
 <body>
   <%- include('../partials/header', {bookTitle: 'Bookster'}); %>
-  <div id="container">
-    <a href="#"><img src="<%= book.image_url %>" alt=""/></a> 
-    <h3>Title: <%= book.title %></h3>
-    <h4>Author: <%= book.author %></h4>
-    <p><%= book.description %></p>
-    <h4><%= book.isbn %></h4>
+  <div class="s">
+    <div class="e">
+      <a href="#"><img src="<%= book.image_url %>" alt=""/></a> 
+    </div>
+    <div class="h">
+      <h2><%= book.title %></h2>
+      <h3>ISBN: book.isbn</h3>
+      <p><%= book.description %></p>
+    </div>
   </div>
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <script src="app.js"></script>
 </body>
 </html>

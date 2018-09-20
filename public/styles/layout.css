@@ -1,0 +1,41 @@
+.s {
+  display: flex;
+  justify-content: center;
+}
+
+.s div img {
+  width: 400px;
+  height: 540px;
+}
+
+.s {
+  border: 1px solid black;
+  width: 70%;
+  height: 60%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.h {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h p {
+  width: 75%;
+}
+
+.e {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.e img {
+  width: 75%;
+}

@@ -44,7 +44,6 @@ const createBook = (req, res) => {
   ];
 
   client.query(SQL, values, (err, result) => {
-    console.log(result.rows[0].id);
     res.redirect(`/book/${result.rows[0].id}`);
   });
 }
