@@ -10,6 +10,7 @@ body {
   height: 100%;
   margin: 0 auto;
   margin-top: 20px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
   background-color: rgb(255, 255, 255);
 }
@@ -112,6 +113,19 @@ body {
     display: flex;
     font-size: 30px;
   }
+
+  footer span {
+    font-size: 11px;
+  }
+
+  footer img {
+    width: 8%;
+    height: 8%;
+  }
+
+  .container {
+    margin-bottom: 0px;
+  }
 } 
 
 /* header */
@@ -170,8 +184,21 @@ a {
 }
 
 footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Libre Baskerville", "Droid Serif", "Times New Roman", Times, serif;
+  width: 100%;
+  height: 20%;
+}
+
+footer span {
+  position: absolute;
+}
+
+footer img {
+  width: 5%;
+  height: 5%;
 }
 
 /* ================================= 
@@ -186,13 +213,9 @@ footer {
 	.header {
 		flex-direction: column;
 		align-items: center;
-    	.header{
-		width: 80%;
+		width: 100%;
 		margin: 0 auto;
-		max-width: 1150px;
-	}
-	}
-
+  }
 }
 
 @media (min-width: 1025px) {
