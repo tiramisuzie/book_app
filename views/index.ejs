@@ -3,18 +3,27 @@
 <%- include('partials/head'); %>
 <body>
   <%- include('partials/header', {bookTitle: 'Bookster'}); %>
-  
   <div class="container">
-    <% books.forEach( book => {  %>
-      <div class="galleryItem">
-        <a href="/book/<%=book.id%>"><img src="<%= book.image_url %>" alt=""/></a>          
-        <h4>Author: <%= book.author %></h4>
-        <h3>Title: <%= book.title %></h3>
+    <% books.forEach( book => { %>
+      <div class="thumbnail">
+        <div class="inner-nail">
+          <img src="<%= book.image_url %>" alt="medium">
+          <div class="presentation">
+            <h4 class="title"><%= book.title %></h4>
+            <p class="author"><%= book.author %></p>
+            <p class="read"><a href="https://mail.google.com/mail/u/0/#inbox">Read More &#8250;</a></p>
+          </div>
+        </div>
       </div>
-      <% });%>   
+    <% });%>
   </div>
   <footer>
     <h2>Number of books: <%= books.length %></h2>        
   </footer>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
