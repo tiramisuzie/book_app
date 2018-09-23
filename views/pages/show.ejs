@@ -3,14 +3,16 @@
   <%- include('../partials/head'); %>
 <body>
   <%- include('../partials/header', {bookTitle: 'Bookster'}); %>
-  <div class="s">
-    <div class="e">
-      <a href="#"><img src="<%= book.image_url %>" alt=""/></a> 
-    </div>
-    <div class="h">
-      <h2><%= book.title %></h2>
-      <h3>ISBN: book.isbn</h3>
-      <p><%= book.description %></p>
+  <div class="show-container">
+    <div class="logo-container">
+      <div class="solo-book">
+        <h2><%= book.title %></h2>
+        <a href="#"><img class="book-image"src="<%= book.image_url %>" alt="<%= book.title %>"/></a>
+      </div>
+      <div class="book-info-container">
+        <h3>ISBN: book.isbn</h3>
+        <p><%= book.description %></p>
+      </div>
     </div>
   </div>
 </body>

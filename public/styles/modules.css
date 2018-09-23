@@ -81,7 +81,7 @@ body {
 }
 
 .read a:hover {
-  color: #ff6060; 
+  color: #ff6060;
 }
 
 .hamburger {
@@ -126,7 +126,11 @@ body {
   .container {
     margin-bottom: 0px;
   }
-} 
+
+  .book-info-container {
+    width: 95%;
+  }
+}
 
 /* header */
 
@@ -168,7 +172,7 @@ a {
 
 .main-nav a {
 	color: white;
-	
+
 }
 
 .main-nav a:hover {
@@ -201,7 +205,7 @@ footer img {
   height: 5%;
 }
 
-/* ================================= 
+/* =================================
   Media Queries
 ==================================== */
 
