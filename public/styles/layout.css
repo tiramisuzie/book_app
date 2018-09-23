@@ -10,6 +10,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Libre Baskerville", "Droid Serif", "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 300px;
+  line-height: 26px;
 }
 
 .logo-container{
