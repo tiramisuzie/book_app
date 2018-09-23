@@ -81,7 +81,7 @@ body {
 }
 
 .read a:hover {
-  color: #ff6060; 
+  color: #ff6060;
 }
 
 .hamburger {
@@ -93,6 +93,10 @@ body {
     display: inline-block;
     width: 90%;
     margin-bottom: 20px;
+  }
+
+  form {
+    width: 90% !important;
   }
 
   .inner-nail img {
@@ -126,7 +130,11 @@ body {
   .container {
     margin-bottom: 0px;
   }
-} 
+
+  .book-info-container {
+    width: 95%;
+  }
+}
 
 /* header */
 
@@ -168,7 +176,7 @@ a {
 
 .main-nav a {
 	color: white;
-	
+
 }
 
 .main-nav a:hover {
@@ -201,7 +209,7 @@ footer img {
   height: 5%;
 }
 
-/* ================================= 
+/* =================================
   Media Queries
 ==================================== */
 
