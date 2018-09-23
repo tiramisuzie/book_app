@@ -95,6 +95,10 @@ body {
     margin-bottom: 20px;
   }
 
+  form {
+    width: 90% !important;
+  }
+
   .inner-nail img {
     margin-top: 25px;
     margin-left: 25px;
