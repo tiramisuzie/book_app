@@ -31,7 +31,6 @@ app.get('/error', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  console.log('*')
   res.redirect('/error');
 });
 
