@@ -4,19 +4,25 @@
 **Version**: 1.1.0 
 
 ## Overview
-create book app.
 
+Book app is an application that displays book data to the client.  Its purpose is to organize ones book collection and allow them to easily aceess the data.
 
-## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+### How to Run
+Make sure to install the npm dependancies, add your postgres database information to the server.js file and run the server.
 
-## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+1. Install npm dependencies in package.json
+2. Add information to the postgress database.
+3. Run nodemon to run the server. 
+
+## What it's made of
+This is an application made with nodejs, Expressjs, the EJS templating engine, with a Postgresql database.
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
+09-18-2018 10.15am = wrote out wireframes and gathered theme.
+09-18-2018 11pm = finaly got the application running.
+09-19-2018 11am = Page to see individual books is up and running.
+09-19-2018 11:10am = Cleaned up HTML and CSS. 
+09-20-2018 12pm = Form information up and running. 
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
-
-## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+## Credits
+Michelle 

@@ -1,4 +1,5 @@
 'use strict';
+$('.hidden').hide();
 $('.hamburger').on('click', () => {
   $('.main-nav').show();
   $('.hamburger').hide();

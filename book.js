@@ -27,13 +27,15 @@ function getOneBook (req, res){
       console.error(err);
       res.redirect('error');
     } else {
-      res.render ('pages/show', {book: result.rows[0]});
+      res.render ('pages/show', {
+        book: result.rows[0],
+        newBook: !!req.query.newBook
+      });
     }
   })
 }
 
 const createBook = (req, res) => {
-  console.log('got a book');
   let SQL = 'INSERT INTO books (author, title, isbn, image_url, description) VALUES ($1, $2, $3, $4, $5) RETURNING id;';
   let values = [
     req.body.author,
@@ -42,9 +44,12 @@ const createBook = (req, res) => {
     req.body.image_url,
     req.body.description
   ];
-
   client.query(SQL, values, (err, result) => {
-    res.redirect(`/book/${result.rows[0].id}`);
+    if (err) {
+      console.log(err);
+    } else {
+      res.redirect(`/book/${result.rows[0].id}?newBook=true`);
+    }
   });
 }
 
